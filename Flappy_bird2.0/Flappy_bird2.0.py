@@ -30,7 +30,7 @@ ekraan.blit(lind1, (500, 300))
 pygame.display.update()
 while (mäng_töötab):
 
-#Menüü liikumine
+#Menüü liikumine (pooleli)
     dt = clock.tick() / 1000
     nimi_y = (100)
     
