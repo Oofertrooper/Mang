@@ -8,6 +8,7 @@ pygame.display.set_caption("Flappy")
 icon = pygame.image.load("Assets\Lind1.png")
 pygame.display.set_icon(icon)
 mäng_töötab = True
+skoor = 0
 
 #Pildid
 ekraan = pygame.display.set_mode(([2000, 1000]), pygame.WINDOWMAXIMIZED)
@@ -28,6 +29,17 @@ ekraan.blit(lind1, (500, 300))
 
 pygame.display.update()
 while (mäng_töötab):
+    
+   #Skoor
+skoor = str(skoor)
+
+aken.blit(font.Font(None, 35).render("skoor:", 1, [0, 0, 0]), (0,0))
+while mäng_töötab == True:
+    a = str(a)
+    aken.blit(font.Font(None, 35).render(skoor, 1, [0, 0, 0]), (80,0))
+
+teksti_font = font.Font(None, 50)
+display.flip()
 
 #Menüü liikumine (pooleli)
     dt = clock.tick() / 1000
