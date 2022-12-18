@@ -27,23 +27,25 @@ lind2 = pygame.image.load("Assets\Lind2.png")
 lind1 = pygame.transform.scale(lind1, (300, 300))
 ekraan.blit(lind1, (500, 300))
 
+#skoor
+pygame.font.init
+skoor = int(5)
+font = pygame.font.Font(Skoor_font, 150)
+
+
+
 pygame.display.update()
-while (mäng_töötab):
+mäng_töötab = True
+while mäng_töötab:
     
-   #Skoor
-    skoor = str(skoor)
-
-aken.blit(font.Font(None, 35).render("skoor:", 1, [0, 0, 0]), (0,0))
-while mäng_töötab == True:
-    a = str(a)
-    aken.blit(font.Font(None, 35).render(skoor, 1, [0, 0, 0]), (80,0))
-
-teksti_font = font.Font(None, 50)
-display.flip()
-
-
-
-pygame.time.delay(17)
-
-
-pygame.display.flip()
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            mäng_töötab = False
+    #Skoor
+    ekraan.blit(taust, (0, 0), (0, 0, 300, 100))
+    skoor_tekst = font.render(str(skoor), True, (255, 255, 255))
+    ekraan.blit(skoor_tekst, (10, 10))
+    skoor += int(1)
+    pygame.display.update()
+    pygame.time.delay(17)
+pygame.quit()
