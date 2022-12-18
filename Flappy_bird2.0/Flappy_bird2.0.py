@@ -39,10 +39,6 @@ aken.blit(font.Font(None, 35).render(a, 1, [0, 0, 0]), (80,0))
 
 teksti_font = font.Font(None, 50)
 display.flip()
-while not event.get(QUIT):
-    time.delay(10)
-
-quit()
 
 #Menüü liikumine (pooleli)
     dt = clock.tick() / 1000
