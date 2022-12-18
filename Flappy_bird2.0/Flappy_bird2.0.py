@@ -28,6 +28,21 @@ ekraan.blit(lind1, (500, 300))
 
 pygame.display.update()
 while (mäng_töötab):
+    
+   #Skoor
+a = 47
+a = str(a)
+skoor = "skoor:"
+
+aken.blit(font.Font(None, 35).render(skoor, 1, [0, 0, 0]), (0,0))
+aken.blit(font.Font(None, 35).render(a, 1, [0, 0, 0]), (80,0))
+
+teksti_font = font.Font(None, 50)
+display.flip()
+while not event.get(QUIT):
+    time.delay(10)
+
+quit()
 
 #Menüü liikumine (pooleli)
     dt = clock.tick() / 1000
