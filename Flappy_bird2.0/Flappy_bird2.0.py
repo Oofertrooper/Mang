@@ -30,7 +30,7 @@ ekraan.blit(lind1, (500, 300))
 #skoor
 pygame.font.init
 skoor = int(5)
-font = pygame.font.Font(Skoor_font, 150)
+font = pygame.font.Font("Assets\Skoor_font.ttf", 100)
 
 
 
@@ -42,7 +42,7 @@ while mäng_töötab:
         if event.type == pygame.QUIT:
             mäng_töötab = False
     #Skoor
-    ekraan.blit(taust, (0, 0), (0, 0, 300, 100))
+    ekraan.blit(taust, (0, 0), (0, 0, 350, 110))
     skoor_tekst = font.render(str(skoor), True, (255, 255, 255))
     ekraan.blit(skoor_tekst, (10, 10))
     skoor += int(1)
