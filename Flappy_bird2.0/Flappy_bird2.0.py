@@ -8,6 +8,8 @@ pygame.display.set_caption("Flappy")
 icon = pygame.image.load("Assets\Lind1.png")
 pygame.display.set_icon(icon)
 mäng_töötab = True
+#a on skoori variable
+a = 0
 
 #Pildid
 ekraan = pygame.display.set_mode(([2000, 1000]), pygame.WINDOWMAXIMIZED)
@@ -30,7 +32,6 @@ pygame.display.update()
 while (mäng_töötab):
     
    #Skoor
-a = 47
 a = str(a)
 skoor = "skoor:"
 
